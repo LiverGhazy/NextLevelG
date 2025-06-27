@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mein Onlineshop</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextLevelG Shop</title>
   <style>
     * {
       margin: 0;
@@ -15,21 +15,40 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
       color: #000;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #000;
-      color: #fff;
+      height: 100vh;
+      background: url('dein-hintergrundbild.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px;
+      color: white;
+      position: relative;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      font-size: 1rem;
+      opacity: 0.8;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -67,44 +86,57 @@
       padding: 40px 20px;
       font-size: 0.9rem;
       color: #333;
+      text-align: center;
     }
 
     footer h2 {
       margin-bottom: 10px;
     }
+
+    /* Button oder Link zum Scrollen */
+    .scroll-button {
+      background: none;
+      border: 2px solid white;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+      margin-top: 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .scroll-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
-  <!-- Erste Seite: Hingucker -->
+
+  <!-- Startseite mit Willkommen -->
   <header>
-    <h1>Willkommen in meinem Onlineshop</h1>
-    <p>Moderne Produkte. Einfaches Shopping.</p>
+    <h1>NEXTLEVELG</h1>
+    <p>Willkommen – Scroll runter zum Produkt</p>
+    <a href="#produkte" class="scroll-button">Jetzt entdecken</a>
+    <div class="scroll-hint">▼ Scrollen</div>
   </header>
 
-  <!-- Zweite Seite: Produkte mit Links -->
-  <section>
+  <!-- Produkte -->
+  <section id="produkte">
     <h2>Unsere Produkte</h2>
-
     <div class="product-link">
       <img src="bild1.jpg" alt="Produkt 1">
       <a href="produkt1.html" target="_blank">Zum Produkt 1</a>
     </div>
-
-    <!-- Weitere Produkte können einfach so hinzugefügt werden -->
-    <!--
-    <div class="product-link">
-      <img src="bild2.jpg" alt="Produkt 2">
-      <a href="produkt2.html" target="_blank">Zum Produkt 2</a>
-    </div>
-    -->
   </section>
 
-  <!-- Letzte Seite: Rechtliche Hinweise -->
+  <!-- Footer -->
   <footer>
     <h2>Rechtliche Hinweise</h2>
     <p>Impressum | Datenschutzerklärung | AGB</p>
-    <p>Alle Inhalte auf dieser Website sind urheberrechtlich geschützt. Kein Teil darf ohne schriftliche Genehmigung verwendet werden.</p>
+    <p>Alle Inhalte auf dieser Website sind urheberrechtlich geschützt.</p>
     <p>Verantwortlich: Max Mustermann, Musterstraße 1, 12345 Musterstadt</p>
   </footer>
+
 </body>
 </html>
